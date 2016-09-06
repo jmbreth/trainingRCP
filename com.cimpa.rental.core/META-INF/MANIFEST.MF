@@ -7,7 +7,8 @@ Bundle-ClassPath: .,
  rental.jar
 Bundle-Vendor: CIMPA
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.12.0",
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.12.0";visibility:=reexport,
  org.eclipse.core.runtime;bundle-version="3.12.0"
-Export-Package: com.opcoach.training.rental
+Export-Package: com.cimpa.rental.core,
+ com.opcoach.training.rental
 Bundle-Activator: com.cimpa.rental.core.RentalCoreActivator

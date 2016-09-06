@@ -12,6 +12,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 
+import com.cimpa.rental.core.RentalCoreActivator;
+import com.opcoach.training.rental.Rental;
+
 public class RentalPart {
 	private Label rentedObjectLabel;
 	private Label loueA;
@@ -43,9 +46,14 @@ public class RentalPart {
 		custLabel = new Label(infoGroup, SWT.NONE);
 		custLabel.setText("John Wayne");
 
+		
+		setRental(RentalCoreActivator.getAgency().getRentals().get(2));
 	}
 	
-	
+	public void setRental (Rental r) {
+		rentedObjectLabel.setText(r.getRentedObject().getName());
+		custLabel.setText(r.getCustomer().getDisplayName());
+	}
 	
 	@Focus
 	public void onFocus() {
