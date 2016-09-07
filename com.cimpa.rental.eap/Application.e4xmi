@@ -7,6 +7,9 @@
           <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.partstack.sample">
             <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.part.sample" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.parts.RentalPart" label="Rental Part"/>
           </children>
+          <children xsi:type="basic:PartStack" xmi:id="_1HThwHT4EeaziNZqynAWIg" elementId="com.cimpa.rental.eap.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_wddwMHT1EeaziNZqynAWIg" elementId="com.cimpa.rental.eap.part.treeview" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.parts.AgencyPart" label="Agencies"/>
+          </children>
         </children>
       </children>
     </children>
@@ -52,4 +55,5 @@
   <addons xmi:id="_6wlLdsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_6wlLd8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
   <addons xmi:id="_6wlLeMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_uIB58HThEeaziNZqynAWIg" elementId="com.cimpa.rental.eap.addon.0" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.RentalAddOn"/>
 </application:Application>

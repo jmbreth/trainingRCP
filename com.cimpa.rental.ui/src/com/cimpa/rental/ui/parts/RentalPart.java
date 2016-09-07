@@ -14,6 +14,7 @@ import org.eclipse.swt.widgets.Label;
 
 import com.cimpa.rental.core.RentalCoreActivator;
 import com.opcoach.training.rental.Rental;
+import com.opcoach.training.rental.RentalAgency;
 
 public class RentalPart {
 	private Label rentedObjectLabel;
@@ -28,7 +29,7 @@ public class RentalPart {
 	}
 	
 	@PostConstruct
-	public void postConstruct(Composite parent) {
+	public void postConstruct(Composite parent, RentalAgency agency) {
 		parent.setLayout(new GridLayout(1, false));
 		Group infoGroup = new Group(parent, SWT.NONE);
 		infoGroup.setText("AAAAAA");
@@ -48,6 +49,7 @@ public class RentalPart {
 
 		
 		setRental(RentalCoreActivator.getAgency().getRentals().get(2));
+		setRental(agency.getRentals().get(0));
 	}
 	
 	public void setRental (Rental r) {
