@@ -2,18 +2,24 @@ package com.cimpa.rental.ui.parts;
 
 import java.util.Collection;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 
+import com.cimpa.rental.ui.RentalUIConstants;
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
 
-public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider {
+public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider, RentalUIConstants {
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -33,12 +39,10 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 			return new Node[] { new Node(Node.CUSTOMER, a), new Node(Node.RENTAL, a), new Node(Node.OBJETCS, a),
 
 			};
-		}
-		else if (parentElement instanceof Node) {
+		} else if (parentElement instanceof Node) {
 			return ((Node) parentElement).getChildren();
 		}
-		
-		
+
 		return null;
 	}
 
@@ -108,6 +112,18 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	public Color getBackground(Object element) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Inject
+	@Named(RENTAL_UI_IMG_REGISTRY)
+	private ImageRegistry registry;
+
+	@Override
+	public Image getImage(Object element) {
+		if (element instanceof Customer) {
+			return registry.get(IMG_CUSTOMER);
+		}
+		return super.getImage(element);
 	}
 
 }
