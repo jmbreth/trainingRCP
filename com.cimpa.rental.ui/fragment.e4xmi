@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_4_i5YHXOEeayz7atu_jeAg">
+  <imports xsi:type="commands:Command" xmi:id="_6Ot64nXREeayz7atu_jeAg" elementId="com.cimpa.rental.eap.command.command1" commandName="Command1" description="My commande"/>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_4_i5YXXOEeayz7atu_jeAg" featurename="addons" parentElementId="xpath:/">
+    <elements xsi:type="application:Addon" xmi:id="_4_i5YnXOEeayz7atu_jeAg" elementId="com.cimpa.rental.eap.addon.0" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.RentalAddOn"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_PkuWgHXPEeayz7atu_jeAg" featurename="commands" parentElementId="xpath:/">
+    <elements xsi:type="commands:Command" xmi:id="_PkuWgXXPEeayz7atu_jeAg" elementId="com.cimpa.rental.eap.command.command1" commandName="Command1" description="My commande"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_6Ot64HXREeayz7atu_jeAg" featurename="handlers" parentElementId="com.cimpa.rental.eap.application">
+    <elements xsi:type="commands:Handler" xmi:id="_6Ot64XXREeayz7atu_jeAg" elementId="com.cimpa.rental.eap.handler.0" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.Handler1" command="_6Ot64nXREeayz7atu_jeAg"/>
+  </fragments>
+</fragment:ModelFragments>

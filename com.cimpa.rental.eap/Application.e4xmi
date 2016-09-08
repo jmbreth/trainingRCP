@@ -51,7 +51,6 @@
   <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handler.openCommand" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handler.saveCommand" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handler.aboutCommand" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
-  <handlers xmi:id="_w2I4MHWgEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handler.0" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.Handler1" command="_p15IkHWgEeact_R_FSpXUQ"/>
   <handlers xmi:id="_TFEGAHWpEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handler.1" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.handlers.CopyCustoHandler" command="_MdptIHWpEeact_R_FSpXUQ"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
