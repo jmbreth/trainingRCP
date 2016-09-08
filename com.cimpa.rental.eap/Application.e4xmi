@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.window.main" label="Rental Application" width="800" height="600">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.window.main" label="Rental Application" iconURI="platform:/plugin/com.cimpa.rental.ui/icons/Agency.png" width="800" height="600">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_6wlLkMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.ide.perspectivestack">
       <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.perspective.sample">
         <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.partsashcontainer.sample">
-          <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.partstack.sample">
-            <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.part.sample" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.parts.RentalPart" label="Rental Part"/>
+          <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.partstack.sample" containerData="30">
+            <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.part.sample" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.parts.RentalPart" label="Rental Part" iconURI="platform:/plugin/com.cimpa.rental.ui/icons/Customers.png"/>
           </children>
-          <children xsi:type="basic:PartStack" xmi:id="_1HThwHT4EeaziNZqynAWIg" elementId="com.cimpa.rental.eap.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_wddwMHT1EeaziNZqynAWIg" elementId="com.cimpa.rental.eap.part.treeview" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.parts.AgencyPart" label="Agencies"/>
+          <children xsi:type="basic:PartStack" xmi:id="_1HThwHT4EeaziNZqynAWIg" elementId="com.cimpa.rental.eap.partstack.0" containerData="70">
+            <children xsi:type="basic:Part" xmi:id="_wddwMHT1EeaziNZqynAWIg" elementId="com.cimpa.rental.eap.part.treeview" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.parts.AgencyPart" label="Agencies" iconURI="platform:/plugin/com.cimpa.rental.ui/icons/Agency.png">
+              <menus xmi:id="_VU77EHWiEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.menu.0">
+                <tags>ViewMenu</tags>
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_kcabEHWjEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handledmenuitem.1" iconURI="platform:/plugin/com.cimpa.rental.ui/icons/Agency.png" command="_p15IkHWgEeact_R_FSpXUQ"/>
+              </menus>
+              <menus xsi:type="menu:PopupMenu" xmi:id="_fHkdUHWjEeact_R_FSpXUQ" elementId="rental.ui.agency.menu">
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_XUR8oHWiEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handledmenuitem.1" iconURI="platform:/plugin/com.cimpa.rental.ui/icons/Agency.png" command="_p15IkHWgEeact_R_FSpXUQ"/>
+                <children xsi:type="menu:HandledMenuItem" xmi:id="__9HS0HWqEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handledmenuitem.2" enabled="false" command="_MdptIHWpEeact_R_FSpXUQ">
+                  <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_p134cHW2Eeact_R_FSpXUQ" coreExpressionId="custSelected"/>
+                </children>
+              </menus>
+              <toolbar xmi:id="_t7A48HWiEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.toolbar.0">
+                <children xsi:type="menu:HandledToolItem" xmi:id="_4rtbYHWiEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handledtoolitem.0" iconURI="platform:/plugin/com.cimpa.rental.ui/icons/Agency.png" command="_p15IkHWgEeact_R_FSpXUQ"/>
+              </toolbar>
+            </children>
           </children>
         </children>
       </children>
@@ -22,6 +36,9 @@
       <children xsi:type="menu:Menu" xmi:id="_6wlLjsgZEeSyMNYR5xypkQ" elementId="help" label="Help">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handleditem.about" label="About" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
       </children>
+      <children xsi:type="menu:Menu" xmi:id="_7qv00HWhEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.menu.monmenu" label="Mon menu">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_AnxvgHWiEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handledmenuitem.0" command="_p15IkHWgEeact_R_FSpXUQ"/>
+      </children>
     </mainMenu>
     <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.trimbar.top">
       <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
@@ -34,6 +51,8 @@
   <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handler.openCommand" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.OpenHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handler.saveCommand" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.handler.aboutCommand" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_w2I4MHWgEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handler.0" contributionURI="bundleclass://com.cimpa.rental.eap/com.cimpa.rental.eap.handlers.Handler1" command="_p15IkHWgEeact_R_FSpXUQ"/>
+  <handlers xmi:id="_TFEGAHWpEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.handler.1" contributionURI="bundleclass://com.cimpa.rental.ui/com.cimpa.rental.ui.handlers.CopyCustoHandler" command="_MdptIHWpEeact_R_FSpXUQ"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="com.cimpa.rental.eap.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -48,6 +67,8 @@
   <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.open" commandName="openCommand"/>
   <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_p15IkHWgEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.command.command1" commandName="Command1" description="My commande"/>
+  <commands xmi:id="_MdptIHWpEeact_R_FSpXUQ" elementId="com.cimpa.rental.eap.command.copycusto" commandName="CopyCusto" description="Copy Customer"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

@@ -12,6 +12,7 @@ import com.opcoach.training.rental.RentalAgency;
 import org.eclipse.e4.core.contexts.ContextInjectionFactory;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.services.EMenuService;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -22,7 +23,7 @@ public class AgencyPart {
 
 	@PostConstruct
 	public void postConstruct(Composite parent, RentalAgency agency, IEclipseContext context,
-			ESelectionService selectionService) {
+			ESelectionService selectionService, EMenuService ms) {
 		// RentalProvider p = new RentalProvider();
 		RentalProvider p = ContextInjectionFactory.make(RentalProvider.class, context);
 
@@ -45,6 +46,8 @@ public class AgencyPart {
 
 			}
 		});
+	ms.registerContextMenu(tv.getControl(), "rental.ui.agency.menu");
+	
 	}
 
 	@Focus

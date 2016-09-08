@@ -5,21 +5,32 @@ import java.util.Collection;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.widgets.Display;
 
 import com.cimpa.rental.ui.RentalUIConstants;
 import com.opcoach.training.rental.Customer;
+import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
 
 public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider, RentalUIConstants {
+
+	@Inject
+	@Named(RENTAL_UI_IMG_REGISTRY)
+	private ImageRegistry registry;
+
+	@Inject
+	@Named(RENTAL_UI_PREF_STORE)
+	private IPreferenceStore prefStore ;
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -102,7 +113,11 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	@Override
 	public Color getForeground(Object element) {
 		if (element instanceof Customer) {
-			return Display.getCurrent().getSystemColor(SWT.COLOR_DARK_CYAN);
+			return getAColor(prefStore.getString(PREF_CUSTOMER_COLOR));
+		}if (element instanceof Rental) {
+			return getAColor(prefStore.getString(PREF_RENTAL_COLOR));
+		}if (element instanceof RentalObject) {
+			return getAColor(prefStore.getString(PREF_RENTAL_OBJECT_COLOR));
 		}
 		// TODO Auto-generated method stub
 		return null;
@@ -113,10 +128,18 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Inject
-	@Named(RENTAL_UI_IMG_REGISTRY)
-	private ImageRegistry registry;
+	
+	
+	private Color getAColor (String rgbKey) {
+		ColorRegistry cr = JFaceResources.getColorRegistry();
+		
+		Color col = cr.get(rgbKey);
+		if (col == null) {
+			cr.put(rgbKey, StringConverter.asRGB(rgbKey));
+			col = cr.get(rgbKey);
+		}
+		return col;
+	}
 
 	@Override
 	public Image getImage(Object element) {
