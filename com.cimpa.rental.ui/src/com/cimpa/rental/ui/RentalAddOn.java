@@ -2,9 +2,12 @@
 package com.cimpa.rental.ui;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.e4.core.contexts.IEclipseContext;
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.di.UIEventTopic;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.osgi.framework.Bundle;
@@ -12,6 +15,7 @@ import org.osgi.framework.FrameworkUtil;
 
 import com.cimpa.rental.core.RentalCoreActivator;
 import com.opcoach.e4.preferences.ScopedPreferenceStore;
+import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.RentalAgency;
 
 public class RentalAddOn implements RentalUIConstants{
@@ -46,4 +50,9 @@ public class RentalAddOn implements RentalUIConstants{
 		return reg;
 	}
 
+	@Inject @Optional
+	void reachOnCustoEvent(@UIEventTopic("CustoCopy") Customer c) {
+		System.out.print(">>> CustoCopy ");
+		System.out.println(c.getDisplayName());
+	}
 }
