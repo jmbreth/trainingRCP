@@ -108,6 +108,45 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 				return a.getObjectsToRent().toArray();
 			return null;
 		}
+
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + getOuterType().hashCode();
+			result = prime * result + ((a == null) ? 0 : a.hashCode());
+			result = prime * result + ((name == null) ? 0 : name.hashCode());
+			return result;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Node other = (Node) obj;
+			if (!getOuterType().equals(other.getOuterType()))
+				return false;
+			if (a == null) {
+				if (other.a != null)
+					return false;
+			} else if (!a.equals(other.a))
+				return false;
+			if (name == null) {
+				if (other.name != null)
+					return false;
+			} else if (!name.equals(other.name))
+				return false;
+			return true;
+		}
+
+		private RentalProvider getOuterType() {
+			return RentalProvider.this;
+		}
+		
 	}
 
 	@Override
