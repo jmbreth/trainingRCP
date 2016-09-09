@@ -12,6 +12,10 @@
                name="applicationCSS"
                value="platform:/plugin/com.cimpa.rental.eap/css/default.css">
          </property>
+         <property
+               name="appName"
+               value="com.cimpa.rental.eap">
+         </property>
       </product>
    </extension>
 
