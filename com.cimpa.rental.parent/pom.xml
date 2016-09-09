@@ -8,12 +8,18 @@
   <packaging>pom</packaging>
   
   <!-- configure p2 repository to resolve against -->
-	<repositories> <repository> <id>neon</id> <layout>p2</layout> <url>http://download.eclipse.org/releases/neon/</url> 
-		</repository> </repositories> 
+	<repositories> 
+	<repository> <id>neon</id> <layout>p2</layout> <url>http://download.eclipse.org/releases/neon/</url> 
+		</repository> 
+	<repository> <id>e4Preferences</id> <layout>p2</layout> <url>https://dl.bintray.com/opcoach/e4Preferences</url> 
+		</repository> 
+		
+		
+		</repositories> 
   <modules>
-    <module>com.cimpa.rental.core</module>
-    <module>com.cimpa.rental.eap</module>
-    <module>com.cimpa.rental.ui</module>
+    <module>../com.cimpa.rental.core</module>
+    <module>../com.cimpa.rental.eap</module>
+    <module>../com.cimpa.rental.ui</module>
   </modules>
   <build>
     <plugins>

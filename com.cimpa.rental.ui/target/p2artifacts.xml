@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='com.cimpa.rental.ui' version='1.0.0.201609091327'>
+    <properties size='5'>
+      <property name='artifact.size' value='30035'/>
+      <property name='download.size' value='30035'/>
+      <property name='maven-groupId' value='com.cimpa.rental'/>
+      <property name='maven-artifactId' value='com.cimpa.rental.ui'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>

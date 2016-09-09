@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='com.cimpa.rental.eap' version='1.0.0.201609091327'>
+    <update id='com.cimpa.rental.eap' range='[0.0.0,1.0.0.201609091327)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='Eap'/>
+      <property name='org.eclipse.equinox.p2.provider' value='CIMPA'/>
+      <property name='maven-groupId' value='com.cimpa.rental'/>
+      <property name='maven-artifactId' value='com.cimpa.rental.eap'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='com.cimpa.rental.eap' version='1.0.0.201609091327'/>
+      <provided namespace='osgi.bundle' name='com.cimpa.rental.eap' version='1.0.0.201609091327'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='13'>
+      <required namespace='osgi.bundle' name='javax.inject' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.e4.ui.model.workbench' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jface' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.e4.ui.services' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.e4.ui.workbench' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.e4.core.di' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.e4.ui.di' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.e4.core.contexts' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.cimpa.rental.ui' range='1.0.0'/>
+      <required namespace='java.package' name='javax.inject' range='1.0.0'/>
+      <required namespace='java.package' name='org.eclipse.jface.dialogs' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='com.cimpa.rental.eap' version='1.0.0.201609091327'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: com.cimpa.rental.eap;singleton:=true&#xA;Bundle-Version: 1.0.0.201609091327&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
