@@ -20,6 +20,7 @@
     <module>../com.cimpa.rental.core</module>
     <module>../com.cimpa.rental.eap</module>
     <module>../com.cimpa.rental.ui</module>
+    <module>../com.cimpa.rentalFeature</module>
   </modules>
   <build>
     <plugins>
