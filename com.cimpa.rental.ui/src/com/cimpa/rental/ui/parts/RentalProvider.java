@@ -1,6 +1,7 @@
 package com.cimpa.rental.ui.parts;
 
 import java.util.Collection;
+import java.util.Map;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -16,6 +17,7 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 
+import com.cimpa.rental.ui.PaletteDesc;
 import com.cimpa.rental.ui.RentalUIConstants;
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.Rental;
@@ -148,9 +150,17 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		}
 		
 	}
+	
+	@Inject @Named(PALETTE_MANAGER)
+	Map<String, PaletteDesc> paletteManager;
+
 
 	@Override
 	public Color getForeground(Object element) {
+		String palId = prefStore.getString(PREF_PALETTE);
+		return paletteManager.get(palId).getProvider().getForeground(element);
+		
+/*
 		if (element instanceof Customer) {
 			return getAColor(prefStore.getString(PREF_CUSTOMER_COLOR));
 		}if (element instanceof Rental) {
@@ -158,14 +168,16 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		}if (element instanceof RentalObject) {
 			return getAColor(prefStore.getString(PREF_RENTAL_OBJECT_COLOR));
 		}
-		// TODO Auto-generated method stub
-		return null;
+		*/
+		
+		
+		
 	}
 
 	@Override
 	public Color getBackground(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		String palId = prefStore.getString(PREF_PALETTE);
+		return paletteManager.get(palId).getProvider().getBackground(element);
 	}
 	
 	

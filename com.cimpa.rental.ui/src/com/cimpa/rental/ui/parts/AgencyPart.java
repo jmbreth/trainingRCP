@@ -68,6 +68,12 @@ public class AgencyPart implements RentalUIConstants {
 			@Preference(value = PREF_RENTAL_COLOR) String u) {
 		if (tv != null)
 			tv.refresh();
+	}	@Inject
+	
+	void refreshfROMpALETTE(
+			@Preference(value = PREF_PALETTE) String c)  {
+		if (tv != null)
+			tv.refresh();
 	}
 
 }

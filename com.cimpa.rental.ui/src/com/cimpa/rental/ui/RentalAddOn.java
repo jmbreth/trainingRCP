@@ -38,6 +38,9 @@ public class RentalAddOn implements RentalUIConstants{
 
 		readModExt(er);
 		readPalettesExt(er,ctx);
+		
+		ctx.set(PALETTE_MANAGER, paletteManager);
+
 	}
 	/**
 	 * A method to create and initialize an ImageRegistry
@@ -87,7 +90,7 @@ public class RentalAddOn implements RentalUIConstants{
 			pl.setName(e.getAttribute("name"));
 			
 			Bundle b = Platform.getBundle(e.getNamespaceIdentifier());
-			Class<?> cz = b.loadClass(e.getAttribute("paletteClass"));
+			Class<?> cz = b.loadClass(e.getAttribute("class"));
 			IColorProvider cp = (IColorProvider) ContextInjectionFactory.make(cz, ctx);
 			
 			pl.setProvider(cp);

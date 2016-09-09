@@ -1,7 +1,9 @@
 package com.cimpa.rental.ui.palette;
 
 import org.eclipse.jface.viewers.IColorProvider;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.widgets.Display;
 
 public class RedBluePalette implements IColorProvider {
 
@@ -11,14 +13,13 @@ public class RedBluePalette implements IColorProvider {
 
 	@Override
 	public Color getForeground(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		return Display.getCurrent().getSystemColor(SWT.COLOR_BLUE);
 	}
 
 	@Override
 	public Color getBackground(Object element) {
-		// TODO Auto-generated method stub
-		return null;
+		return Display.getCurrent().getSystemColor(SWT.COLOR_RED);
+
 	}
 
 }

@@ -14,9 +14,15 @@
    <extension
          point="com.opcoach.e4.preferences.e4PreferencePages">
       <page
-            name="RentalColor"
+            category="com.cimpa.rental.ui.page1"
             class="com.cimpa.rental.ui.prefs.ColorPrefPage"
-            id="com.cimpa.rental.ui.colors">
+            id="com.cimpa.rental.ui.colors"
+            name="Default">
+      </page>
+      <page
+            class="com.cimpa.rental.ui.prefs.PalettePrefPage"
+            id="com.cimpa.rental.ui.page1"
+            name="palette">
       </page>
    </extension>
    <extension
@@ -37,12 +43,12 @@
       <palette
             class="com.cimpa.rental.ui.palette.DefaultPalette"
             id="com.cimpa.rental.ui.palette1"
-            name="com.cimpa.rental.ui.defaultPalette">
+            name="Default">
       </palette>
       <palette
             class="com.cimpa.rental.ui.palette.RedBluePalette"
             id="com.cimpa.rental.ui.palette2"
-            name="com.cimpa.rental.ui.redBlue">
+            name="RedBlue">
       </palette>
    </extension>
 
