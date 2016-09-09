@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin>
+   <extension-point id="palette" name="palette" schema="schema/palette.exsd"/>
 
    <extension
          point="org.eclipse.core.expressions.definitions">
@@ -30,6 +31,19 @@
       <fragment
             uri="fragment.e4xmi">
       </fragment>
+   </extension>
+   <extension
+         point="com.cimpa.rental.ui.palette">
+      <palette
+            class="com.cimpa.rental.ui.palette.DefaultPalette"
+            id="com.cimpa.rental.ui.palette1"
+            name="com.cimpa.rental.ui.defaultPalette">
+      </palette>
+      <palette
+            class="com.cimpa.rental.ui.palette.RedBluePalette"
+            id="com.cimpa.rental.ui.palette2"
+            name="com.cimpa.rental.ui.redBlue">
+      </palette>
    </extension>
 
 </plugin>
